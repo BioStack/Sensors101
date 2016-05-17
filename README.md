@@ -27,9 +27,24 @@ To establish a baseline. Watch these fun videos for 2-4 minutes.
 * [Fish](https://www.youtube.com/watch?v=ngLbnN3gCi8&feature=youtu.be)
 * [Llama](https://youtu.be/Al5FUnQ65vQ)
 
-### 4. Load the data and plot.
+To collect data for a programming task, try identifying the error in the following code snippet -- in 3 minutes:
 
+* [Task 1](https://github.com/BioStack/Sensors101/blob/master/Tasks/SortingFunctions2.cs)
+* [Task 2](https://github.com/BioStack/Sensors101/blob/master/Tasks/SortingFunctions2.cs)
 
+### 4. Load the data
 
-### 5. Analyze the data
+All data will export to a csv file. A sample of data for each sensor can be found in [Data](https://github.com/BioStack/Sensors101/tree/master/Data).
 
+### Plot and Analyze data
+
+Within RStudio, you can first run [sample code](https://github.com/BioStack/Sensors101/tree/master/Analysis) to execute code snippets.
+
+Now that you've recorded some data and you want to see it, follow one of the following walkthroughs:
+
+* [EDA](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#eda)
+* [EEG](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#eeg)
+* [Heart](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#heart)
+* [Touch Mouse]()
+
+For the Eyetracking sensor, we'll just watch a playback of tracking session.
