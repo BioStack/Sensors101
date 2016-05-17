@@ -34,7 +34,7 @@ plot(tonic)
 
 plot(phasic)
 
-signal <- edaSignal
+signal <- phasic 
 # Get Continuous Wavelet Transform of eda signal.
 edaSignal.cwt <- wavCWT(signal)
 plot(edaSignal.cwt, series=TRUE)
@@ -49,7 +49,7 @@ W <- edaSignal.cwt
 z <- wavCWTTree(W)
 
 # peaks (snr.min: the minimum allowed peak signal-to-noise ratio. Default: 3.)
-p <- wavCWTPeaks(z,snr.min=2)
+p <- wavCWTPeaks(z,snr.min=0.1)
 
 #x <- as(linchirp@positions,"numeric")
 #y <- linchirp@data
