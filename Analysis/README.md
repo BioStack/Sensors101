@@ -85,7 +85,7 @@ p <- wavCWTPeaks(z,snr.min=0.1)
 
 We have points of the peaks, but we want to be able to plot them on the original graph.
 
-```
+```r
 plot(x, signal, type="l", xlab="time", ylab="phasic peaks")
 
 peakX = x[attr(p, which="peaks")[,"iendtime"]]
