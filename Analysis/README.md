@@ -8,14 +8,14 @@ If doing on your own machine, you'll need to install [R](https://www.r-project.o
 
 Then, get files for this workshop.
 
-```
+```console
 git clone https://github.com/BioStack/Sensors101
 cd Sensors101/Analysis
 ```
 
 Finally, install dependencies (or using RStudio).
 
-```
+```console
 Rscript install.R
 ```
 
@@ -23,7 +23,7 @@ Rscript install.R
 
 The template code already reads the signal file from a command line argument or uses a default file. Let's add code to plot it.
 
-```
+```r
 # Draw original signal
 plot(edaSignal, col="green")
 ```
