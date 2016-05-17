@@ -78,7 +78,7 @@ z <- wavCWTTree(edaSignal.cwt)
 
 With the wavelet tree, we can use a peak finding algorithm:
 
-```
+```r
 # peaks (snr.min: the minimum allowed peak signal-to-noise ratio. Default: 3.)
 p <- wavCWTPeaks(z,snr.min=0.1)
 ```
@@ -93,6 +93,8 @@ peakY = phasic[attr(p, which="peaks")[,"iendtime"]]
 
 points(x=peakX, y=peakY, pch=16, col="red", cex=1.2)
 ```
+
+![image](https://cloud.githubusercontent.com/assets/742934/15332399/6d8dee7a-1c33-11e6-8fa3-ec0ac2eb5f40.png)
 
 ##### Other visualizations
 
