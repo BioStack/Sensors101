@@ -5,10 +5,10 @@
 1. Put chest strap on underneath your shirt. The black plastic “electrodes” should be on your ribs just below your pectoral muscles.
 2. Attach Zephyr device to the two snaps on the chest strap.
 3. If you need to pair it to your computer via Bluetooth
-    a. Attach the Zephyr HxM Monitor to the chest strap.
-    b. Open the Windows Settings app from the Start menu. 
-    c. Go to the Devices pane and choose Bluetooth in the left-hand nav bar.
-    d. When the computer has detected the heart rate monitor, it will show up as an HXM033918 device. Click on the Pair button to make it connect to the computer.
+    * a. Attach the Zephyr HxM Monitor to the chest strap.
+    * b. Open the Windows Settings app from the Start menu. 
+    * c. Go to the Devices pane and choose Bluetooth in the left-hand nav bar.
+    * d. When the computer has detected the heart rate monitor, it will show up as an HXM033918 device. Click on the Pair button to make it connect to the computer.
 
 ### Get Signal
 
