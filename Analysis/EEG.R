@@ -1,3 +1,5 @@
+args<-commandArgs(TRUE)
+
 # Append local library
 .libPaths( c( .libPaths(), "./lib") )
 library(signal)
@@ -5,7 +7,14 @@ library(pracma)
 library(wmtsa)
 library(oce)
 
-f.results <- read.table("../Data/Mindwave/test.filtered.csv", header=TRUE, sep=",")
+dataFile <- "../Data/Mindwave/test.filtered.csv"
+
+if( length(args) == 1 )
+{
+	dataFile <- args[1]
+}
+
+f.results <- read.table(args, header=TRUE, sep=",")
 
 # Get signal
 x = f.results$Time
