@@ -3,7 +3,7 @@
 library(signal)
 library(pracma)
 library(wmtsa)
-#library(oce)
+library(oce)
 
 f.results <- read.table("../Data/Mindwave/test.filtered.csv", header=TRUE, sep=",")
 
@@ -38,4 +38,5 @@ plot(beta)
 plot(gamma)
 plot(delta)
 plot(theta)
-#pwelch(y)
+
+pwelch(y)
