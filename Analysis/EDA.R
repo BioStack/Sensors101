@@ -4,7 +4,6 @@ library(signal)
 library(pracma)
 library(wmtsa)
 
-
 dataFile <- "../Data/EDA_20160512.csv"
 
 if( length(args) == 1 )
