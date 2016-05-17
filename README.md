@@ -45,6 +45,6 @@ Now that you've recorded some data and you want to see it, follow one of the fol
 * [EDA](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#eda)
 * [EEG](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#eeg)
 * [Heart](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#heart)
-* [Touch Mouse]()
+* [Touch Mouse](https://github.com/BioStack/Sensors101/blob/master/Analysis/README.md#touch)
 
 For the Eyetracking sensor, we'll just watch a playback of tracking session.
