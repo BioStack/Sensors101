@@ -6,7 +6,7 @@ library(wmtsa)
 
 dataFile <- "../Data/EDA_20160512.csv"
 
-if( length(args) == 1 )
+if( length(args) == 2 )
 {
 	dataFile <- args[1]
 }
