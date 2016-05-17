@@ -119,7 +119,7 @@ A Rplots.pdf will be created. You can open using  `open Rplots.pdf` (Mac) or `st
 
 An EEG signal is a complex waveform that reflects great ensembles of neural activity. Research has characterized different types of activity that can be associated with different components of the signal (alpha, beta, gamma, delta, theta). For example, delta is often associated with motor activity.
 
-To isolate 
+To isolate the bands, you can use a band-pass filter, which will only get a signal in 
 
 ```
 # Construct a band-pass filter using a butterworth filter design.
