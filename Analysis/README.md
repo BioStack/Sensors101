@@ -197,3 +197,16 @@ Load heart.R in RStudio.
 plot(x, y, type="l", ylim=range(0, 1.5*max_y,5), lwd = 1, col = "green")
 ```
 
+## Touch
+
+```r
+x = time - time[1] # subtract the initial time to start at zer0
+y = f.results$touchmousesum
+max_y = max(y)
+
+# Draw original signal
+plot(x, y, type="l", ylim=range(0, 1.5*max_y,5), lwd = 1, col = "green")
+
+# moving average
+plot(rollmean(y, 20), type="l")
+```
