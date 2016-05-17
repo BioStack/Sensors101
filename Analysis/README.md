@@ -27,6 +27,7 @@ The template code already reads the signal file from a command line argument or 
 # Draw original signal
 plot(edaSignal, col="green")
 ```
+A Rplots.pdf will be created. You can open using  `open Rplots.pdf` (Mac) or `start Rplots.pdf` (Windows).
 
 ![image](https://cloud.githubusercontent.com/assets/742934/15330758/3e73056e-1c2c-11e6-850a-0999e95bcf95.png)
 
@@ -52,4 +53,52 @@ Let's apply the filter on the edaSignal.
 ```r
 phasic <- signal:::filter(bf_high, edaSignal)
 tonic <- signal:::filter(bf_low, edaSignal)
+```
+
+##### Plotting the components.
+
+```r
+plot(tonic)
+plot(phasic)
+```
+
+You'll notice that the tonic part of the signal will make larger changes in amplititude, whereas, the phasic component will have many peaks. Phasic signals can occur naturally several times a minute.
+
+##### Finding peaks
+
+A common task you'll want to perform is to identify event-related responses within the phasic component.
+This problem is referred to as a "peak finding". Peak finding can actually be fairly difficult, especially with a fast changing signal with noise. Here, we will use a wavelet-based technique to help locate peaks.
+
+```r
+# Get Continuous Wavelet Transform of eda signal.
+edaSignal.cwt <- wavCWT(phasic)
+# tree
+z <- wavCWTTree(edaSignal.cwt)
+```
+
+With the wavelet tree, we can use a peak finding algorithm:
+
+```
+# peaks (snr.min: the minimum allowed peak signal-to-noise ratio. Default: 3.)
+p <- wavCWTPeaks(z,snr.min=0.1)
+```
+
+We have points of the peaks, but we want to be able to plot them on the original graph.
+
+```
+plot(x, signal, type="l", xlab="time", ylab="phasic peaks")
+
+peakX = x[attr(p, which="peaks")[,"iendtime"]]
+peakY = phasic[attr(p, which="peaks")[,"iendtime"]]
+
+points(x=peakX, y=peakY, pch=16, col="red", cex=1.2)
+```
+
+##### Other visualizations
+
+We can visualize the wavelet.
+
+```r
+plot(edaSignal.cwt, series=TRUE)
+plot(edaSignal.cwt, type="persp")
 ```
