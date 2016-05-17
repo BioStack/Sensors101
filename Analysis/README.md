@@ -21,3 +21,10 @@ Rscript install.R
 
 ### EDA
 
+The template code already reads the signal file from a command line argument or uses a default file. Let's add code to plot it.
+
+```
+# Draw original signal
+plot(edaSignal, col="green")
+```
+
