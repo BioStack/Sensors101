@@ -187,3 +187,13 @@ You can visualize the power spectrum of the signal.
 ```r
 pwelch(y)
 ```
+
+## Heart
+
+Load heart.R in RStudio.
+
+```
+# Draw original signal
+plot(x, y, type="l", ylim=range(0, 1.5*max_y,5), lwd = 1, col = "green")
+```
+
