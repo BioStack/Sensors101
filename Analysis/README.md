@@ -121,7 +121,7 @@ An EEG signal is a complex waveform that reflects great ensembles of neural acti
 
 To isolate the bands, you can use a band-pass filter, which will only get a signal in the specific bands corresponding to the channels.
 
-```
+```r
 # Construct a band-pass filter using a butterworth filter design.
 # (alpha: 8-12hz, beta 12-30 hz, gamma 30-80hz, delta 0-4 hz, theta 4-8 hz)
 bf_alpha <- butter(2, c(8/1000,12/1000), type="pass")
@@ -133,7 +133,7 @@ bf_theta <- butter(2, c(4/1000,8/1000), type="pass")
 
 Now lets get the signals by applying the filter.
 
-```
+```r
 alpha <- signal:::filter(bf_alpha, y)
 beta  <- signal:::filter(bf_beta, y)
 gamma <- signal:::filter(bf_gamma, y)
@@ -143,7 +143,7 @@ theta <- signal:::filter(bf_theta, y)
 
 And draw them
 
-```
+```r
 plot(alpha)
 plot(beta)
 plot(gamma)
@@ -158,7 +158,7 @@ We can build a simple blink detector by trying to detect peaks in the delta band
 
 First let's get a wavelet and a set of peaks.
 
-```
+```r
 W <- wavCWT(delta)
 # tree
 z <- wavCWTTree(W)
@@ -168,7 +168,7 @@ p <- wavCWTPeaks(z,snr.min=5)
 
 Let's plot of the peaks and delta signal.
 
-```
+```r
 plot(delta, type="l", xlab="time", ylab="delta blinks")
 
 peakX = attr(p, which="peaks")[,"time"]
