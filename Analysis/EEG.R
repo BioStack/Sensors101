@@ -51,25 +51,6 @@ plot(theta)
 pwelch(y)
 
 
-toSeconds <- function(x){
-   if (!is.character(x)) stop("x must be a character string of the form H:M:S")
-   if (length(x)<=0)return(x)
-
-   unlist(
-      lapply(x,
-         function(i){
-            i <- as.numeric(strsplit(i,':',fixed=TRUE)[[1]])
-            if (length(i) == 3) 
-               i[1]*3600 + i[2]*60 + i[3]
-            else if (length(i) == 2) 
-               i[1]*60 + i[2]
-            else if (length(i) == 1) 
-               i[1]
-         }  
-      )  
-   )  
-} 
-
 ### Blink detector
 W <- wavCWT(delta)
 # tree
@@ -79,9 +60,9 @@ p <- wavCWTPeaks(z,snr.min=5)
 
 plot(delta, type="l", xlab="time", ylab="delta blinks")
 
-peakX = attr(p, which="peaks")[,"iendtime"]
-peakY = delta[attr(p, which="peaks")[,"iendtime"]]
+peakX = attr(p, which="peaks")[,"time"]
+peakY = delta[attr(p, which="peaks")[,"time"]]
 
 points(x=peakX,y=peakY, pch=16, col="red", cex=1.2)
 
-attr(p, which="peaks")
+
