@@ -39,6 +39,8 @@ We are typically interested in the phasic component if we're studying responses 
 
 ##### Building a filter
 
+We can use a butterworth filter design to build a high-pass and low-pass filter. Basically, this allows us seperate our signal into a phasic and tonic component.
+
 
 
 
