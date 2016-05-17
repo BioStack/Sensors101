@@ -4,7 +4,7 @@ library(signal)
 library(pracma)
 library(wmtsa)
 
-f.results <- read.table("EDA.csv", header=TRUE, sep=",")
+f.results <- read.table("../Data/EDA_20160512.csv", header=TRUE, sep=",")
 
 # Get signal
 x = f.results$time
