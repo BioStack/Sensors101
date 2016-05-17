@@ -177,6 +177,9 @@ peakY = delta[attr(p, which="peaks")[,"time"]]
 points(x=peakX,y=peakY, pch=16, col="red", cex=1.2)
 ```
 
+![image](https://cloud.githubusercontent.com/assets/742934/15334914/c37c1d50-1c35-11e6-829d-1e08916b6016.png)
+
+
 ### Other visualizations
 
 You can visualize the power spectrum of the signal.
