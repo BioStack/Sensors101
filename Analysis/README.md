@@ -19,7 +19,7 @@ Finally, install dependencies (or using RStudio).
 Rscript install.R
 ```
 
-### EDA
+## EDA
 
 The template code already reads the signal file from a command line argument or uses a default file. Let's add code to plot it.
 
@@ -104,3 +104,14 @@ We can visualize the wavelet.
 plot(edaSignal.cwt, series=TRUE)
 plot(edaSignal.cwt, type="persp")
 ```
+
+## EEG
+
+The template code already reads the signal file from a command line argument or uses a default file. Let's add code to plot it.
+
+```r
+# Draw original signal
+plot(eegSignal, col="green")
+```
+A Rplots.pdf will be created. You can open using  `open Rplots.pdf` (Mac) or `start Rplots.pdf` (Windows).
+
