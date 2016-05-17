@@ -41,6 +41,15 @@ We are typically interested in the phasic component if we're studying responses 
 
 We can use a butterworth filter design to build a high-pass and low-pass filter. Basically, this allows us seperate our signal into a phasic and tonic component.
 
+```r
+# Construct a low and high-pass filter using a butterworth filter design.
+bf_low <- butter(2, 1/20, type="low")
+bf_high <- butter(2, 1/20, type="high")
+```
 
+Let's apply the filter on the edaSignal.
 
-
+```r
+phasic <- signal:::filter(bf_high, edaSignal)
+tonic <- signal:::filter(bf_low, edaSignal)
+```
