@@ -22,11 +22,14 @@ Read the instructions for the sensors:
 
 ### 3. Record data from a few people.
 
-Watch these fun videos for 2-4 minutes.
+To establish a baseline. Watch these fun videos for 2-4 minutes.
 
-Select a task.
+* [Fish](https://www.youtube.com/watch?v=ngLbnN3gCi8&feature=youtu.be)
+* [Llama](https://youtu.be/Al5FUnQ65vQ)
 
 ### 4. Load the data and plot.
+
+
 
 ### 5. Analyze the data
 
